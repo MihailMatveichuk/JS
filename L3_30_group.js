@@ -616,7 +616,7 @@ const enterprises = [{
 
 let countDep = 0;
 let counId = 0;
-let newId = enterprises.map(function(elem){
+let newId = enterprises.filter(function(elem){
     counId += elem.departments.length;
 });
 let newDepId = enterprises.filter(function(item){
