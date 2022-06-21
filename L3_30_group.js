@@ -86,7 +86,7 @@ const users = [{
 ];
 
 function findUser() {
-    let findedUsers = users.filter(function(e) {
+    let findedUsers = users.filter(function (e) {
         return e.registrationDate === '09.10.2021' || e.registrationDate === '10.10.2021';
     });
     console.log(findedUsers);
@@ -530,40 +530,58 @@ const enterprises = [{
     }
 ];
 
-// let count = 0;
-// enterprises.forEach(function(arr, name) {
-//     let sum = arr.departments.map(item => item.employees_count).reduce((prev, next) => prev + next);
-//     if (sum == 0 || arr.departments.employees_count == 0) {
-//         console.log(`${arr.name} (нет сотрудников)`);
-//     } else {
-//         console.log(`${arr.name} (${sum} сотрудников)`);
-//     }
-//     arr.departments.forEach(function(dep, name) {
-//         if (dep.employees_count == 0) {
-//             console.log(` - ${dep.name} (нет сотрудников)`);
-//         } else {
-//             console.log(` - ${dep.name} (${dep.employees_count} сотрудников)`);
-//         }
-//     });
-// });
-// 2. Написать функцию, которая будет принимать 1 аргумент (id отдела или название отдела и возвращать название предприятия, 
-//к которому относится).
-function getEnterpriseName(argument) {
-    let findOfArg = enterprises.find(function(item) {
-        if (item == argument) {
-            console.log(findOfArg.name);
-        } else {
-            console.log("Valueble wasn't found");
-        }
-    });
-}
-getEnterpriseName("Отдел маркетинга");
+// // let count = 0;
+// // enterprises.forEach(function(arr, name) {
+// //     let sum = arr.departments.map(item => item.employees_count).reduce((prev, next) => prev + next);
+// //     if (sum == 0 || arr.departments.employees_count == 0) {
+// //         console.log(`${arr.name} (нет сотрудников)`);
+// //     } else {
+// //         console.log(`${arr.name} (${sum} сотрудников)`);
+// //     }
+// //     arr.departments.forEach(function(dep, name) {
+// //         if (dep.employees_count == 0) {
+// //             console.log(` - ${dep.name} (нет сотрудников)`);
+// //         } else {
+// //             console.log(` - ${dep.name} (${dep.employees_count} сотрудников)`);
+// //         }
+// //     });
+// // });
+// // 2. Написать функцию, которая будет принимать 1 аргумент (id отдела или название отдела и возвращать название предприятия, 
+// // к которому относится).
+// function getEnterpriseName(argument) {
+//     enterprises.forEach(function (item) {
+//         let findOfArg = item.departments.find(el => {
+//             if(el.id == argument || el.name == argument){
+//             console.log(item.name);}
+//         });
+//     }); 
+// }
+// getEnterpriseName("Отдел аналитики");
 
 // Пример:
 // getEnterpriseName(4) // Предприятие 1
 // getEnterpriseName("Отдел маркетинга") // Предприятие 2
 
-// 3. Написать функцию, которая будет добавлять предприятие. В качестве аргумента принимает название предприятия
+// 3. Написать функцию, которая будет добавлять предприятие. В качестве аргумента принимает название предприятияfunc    
+let count = 0;
+let newId = enterprises.filter(function(elem, index){ elem.departments.filter((item, index) => {
+    count += item.id;
+    console.log(count);
+});
+});
+
+function addEnterprise (name){
+   
+    //enterprises.forEach(el => el.departments.filter(item => item.id));
+    let newEnter = {
+        id: count,
+        name,
+        departments: []  
+    };
+    enterprises.push(newEnter);
+    console.log(enterprises);
+} addEnterprise('Hello');
+
 
 // Пример:
 // addEnterprise("Название нового предприятия")

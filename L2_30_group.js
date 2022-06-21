@@ -42,7 +42,7 @@ function getWordStructure(word) {
     let countDg = 0;
     let vowel = 'aeiouAEIOU';
     let symbols = "<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=";
-    let digits = [1-9];
+    let digits = '1234567890';
     for (let i = 0; i <= word.length; i++) {
         if (vowel.indexOf(word[i]) !== -1) {
             countGl += 1;
@@ -58,7 +58,7 @@ console.log('countSg =', countSg);
 }
 getWordStructure('case');
 getWordStructure('Case');
-getWordStructure('Check-List');
+getWordStructure('Check-List589760');
 
 /*4**. Написать функцию, которая проверяет, является ли слово палиндромом
 e.g. function isPalindrom(word)*/
