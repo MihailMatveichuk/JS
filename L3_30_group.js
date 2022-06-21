@@ -529,22 +529,74 @@ const enterprises = [{
         }, ]
     }
 ];
-let count = 0;
-enterprises.forEach(function(arr, name) {
-    let sum = arr.departments.map(item => item.employees_count).reduce((prev, next) => prev + next);
-    if (sum == 0 || arr.departments.employees_count == 0) {
-        console.log(`${arr.name} (нет сотрудников)`);
-    } else {
-        console.log(`${arr.name} (${sum} сотрудников)`);
-    }
-    arr.departments.forEach(function(dep, name) {
-        if (dep.employees_count == 0) {
-            console.log(` - ${dep.name} (нет сотрудников)`);
+
+// let count = 0;
+// enterprises.forEach(function(arr, name) {
+//     let sum = arr.departments.map(item => item.employees_count).reduce((prev, next) => prev + next);
+//     if (sum == 0 || arr.departments.employees_count == 0) {
+//         console.log(`${arr.name} (нет сотрудников)`);
+//     } else {
+//         console.log(`${arr.name} (${sum} сотрудников)`);
+//     }
+//     arr.departments.forEach(function(dep, name) {
+//         if (dep.employees_count == 0) {
+//             console.log(` - ${dep.name} (нет сотрудников)`);
+//         } else {
+//             console.log(` - ${dep.name} (${dep.employees_count} сотрудников)`);
+//         }
+//     });
+// });
+// 2. Написать функцию, которая будет принимать 1 аргумент (id отдела или название отдела и возвращать название предприятия, 
+//к которому относится).
+function getEnterpriseName(argument) {
+    let findOfArg = enterprises.find(function(item) {
+        if (item == argument) {
+            console.log(findOfArg.name);
         } else {
-            console.log(` - ${dep.name} (${dep.employees_count} сотрудников)`);
+            console.log("Valueble wasn't found");
         }
     });
-});
+}
+getEnterpriseName("Отдел маркетинга");
+
+// Пример:
+// getEnterpriseName(4) // Предприятие 1
+// getEnterpriseName("Отдел маркетинга") // Предприятие 2
+
+// 3. Написать функцию, которая будет добавлять предприятие. В качестве аргумента принимает название предприятия
+
+// Пример:
+// addEnterprise("Название нового предприятия")
+
+// 4. Написать функцию, которая будет добавлять отдел в предприятие. В качестве аргумента принимает id предприятия, 
+//в которое будет добавлен отдел и название отдела.
+
+// Пример:
+// addDepartment(1, "Название нового отдела")
+
+// 5. Написать функцию для редактирования названия предприятия. Принимает в качестве аргумента id предприятия и новое имя предприятия.
+
+// Пример:
+// editEnterprise(1, "Новое название предприятия")
+
+
+// 6. Написать функцию для редактирования названия отдела. Принимает в качестве аргумента id отдела и новое имя отдела.
+
+// Пример:
+// editDepartment(7, "Новое название отдела")
+
+
+// 7. Написать функцию для удаления предприятия. В качестве аргумента принимает id предприятия.
+
+// Пример:
+// deleteEnterprise(1)
+
+
+// 8. Написать функцию для удаления отдела. В качестве аргумента принимает id отдела. Удалить отдел можно только, 
+//если в нем нет сотрудников.
+
+// Пример:
+// deleteDepartment(3)
 
 
 
