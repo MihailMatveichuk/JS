@@ -478,6 +478,168 @@ unic(arr);
 // Предприятие 3 (нет сотрудников)
 // - Отдел аналитики (нет сотрудников)
 
+// const enterprises = [{
+//         id: 1,
+//         name: "Предприятие 1",
+//         departments: [{
+//                 id: 2,
+//                 name: "Отдел тестирования",
+//                 employees_count: 10,
+//             },
+//             {
+//                 id: 3,
+//                 name: "Отдел маркетинга",
+//                 employees_count: 20,
+//             },
+//             {
+//                 id: 4,
+//                 name: "Администрация",
+//                 employees_count: 15,
+//             },
+//         ]
+//     },
+//     {
+//         id: 5,
+//         name: "Предприятие 2",
+//         departments: [{
+//                 id: 6,
+//                 name: "Отдел разработки",
+//                 employees_count: 50,
+//             },
+//             {
+//                 id: 7,
+//                 name: "Отдел маркетинга",
+//                 employees_count: 20,
+//             },
+//             {
+//                 id: 8,
+//                 name: "Отдел охраны труда",
+//                 employees_count: 5,
+//             },
+//         ]
+//     },
+//     {
+//         id: 9,
+//         name: "Предприятие 3",
+//         departments: [{
+//             id: 10,
+//             name: "Отдел аналитики",
+//             employees_count: 0,
+//         }, ]
+//     }
+// ];
+
+// let count = 0;
+// enterprises.forEach(function(arr, name) {
+//     let sum = arr.departments.map(item => item.employees_count).reduce((prev, next) => prev + next);
+//     if (sum == 0 || arr.departments.employees_count == 0) {
+//         console.log(`${arr.name} (нет сотрудников)`);
+//     } else {
+//         console.log(`${arr.name} (${sum} сотрудников)`);
+//     }
+//     arr.departments.forEach(function(dep, name) {
+//         if (dep.employees_count == 0) {
+//             console.log(` - ${dep.name} (нет сотрудников)`);
+//         } else {
+//             console.log(` - ${dep.name} (${dep.employees_count} сотрудников)`);
+//         }
+//     });
+// });
+// // 2. Написать функцию, которая будет принимать 1 аргумент (id отдела или название отдела и возвращать название предприятия, 
+// // к которому относится).
+// function getEnterpriseName(argument) {
+//     enterprises.forEach(function (item) {
+//         let findOfArg = item.departments.find(el => {
+//             if(el.id == argument || el.name == argument){
+//             console.log(item.name);}
+//         });
+//     }); 
+// }
+// getEnterpriseName("Отдел аналитики");
+
+// Пример:
+// getEnterpriseName(4) // Предприятие 1
+// getEnterpriseName("Отдел маркетинга") // Предприятие 2
+
+// 3. Написать функцию, которая будет добавлять предприятие. В качестве аргумента принимает название предприятияfunc    
+// const enterprises = [{
+//     id: 1,
+//     name: "Предприятие 1",
+//     departments: [{
+//             id: 2,
+//             name: "Отдел тестирования",
+//             employees_count: 10,
+//         },
+//         {
+//             id: 3,
+//             name: "Отдел маркетинга",
+//             employees_count: 20,
+//         },
+//         {
+//             id: 4,
+//             name: "Администрация",
+//             employees_count: 15,
+//         },
+//     ]
+// },
+// {
+//     id: 5,
+//     name: "Предприятие 2",
+//     departments: [{
+//             id: 6,
+//             name: "Отдел разработки",
+//             employees_count: 50,
+//         },
+//         {
+//             id: 7,
+//             name: "Отдел маркетинга",
+//             employees_count: 20,
+//         },
+//         {
+//             id: 8,
+//             name: "Отдел охраны труда",
+//             employees_count: 5,
+//         },
+//     ]
+// },
+// {
+//     id: 9,
+//     name: "Предприятие 3",
+//     departments: [{
+//         id: 10,
+//         name: "Отдел аналитики",
+//         employees_count: 0,
+//     }, ]
+// }
+// ];
+
+
+// let countDep = 0;
+// let counId = 0;
+// let newId = enterprises.filter(function(elem){
+//     counId += elem.departments.length;
+// });
+// let newDepId = enterprises.filter(function(item){
+//     countDep = enterprises.length;
+// });
+// let count = countDep + counId + 1; 
+
+// function addEnterprise (name){
+//     let newEnter = {
+//         id: count,
+//         name,
+//         departments: []  
+//     };
+//     enterprises.push(newEnter);
+//     console.log(enterprises);
+// } addEnterprise("Название нового предприятия");
+
+
+// Пример:
+// addEnterprise("Название нового предприятия")
+
+// 4. Написать функцию, которая будет добавлять отдел в предприятие. В качестве аргумента принимает id предприятия, 
+//в которое будет добавлен отдел и название отдела.
 const enterprises = [{
         id: 1,
         name: "Предприятие 1",
@@ -528,118 +690,31 @@ const enterprises = [{
         }, ]
     }
 ];
-
-let count = 0;
-enterprises.forEach(function(arr, name) {
-    let sum = arr.departments.map(item => item.employees_count).reduce((prev, next) => prev + next);
-    if (sum == 0 || arr.departments.employees_count == 0) {
-        console.log(`${arr.name} (нет сотрудников)`);
-    } else {
-        console.log(`${arr.name} (${sum} сотрудников)`);
-    }
-    arr.departments.forEach(function(dep, name) {
-        if (dep.employees_count == 0) {
-            console.log(` - ${dep.name} (нет сотрудников)`);
-        } else {
-            console.log(` - ${dep.name} (${dep.employees_count} сотрудников)`);
-        }
-    });
-});
-// 2. Написать функцию, которая будет принимать 1 аргумент (id отдела или название отдела и возвращать название предприятия, 
-// к которому относится).
-function getEnterpriseName(argument) {
-    enterprises.forEach(function (item) {
-        let findOfArg = item.departments.find(el => {
-            if(el.id == argument || el.name == argument){
-            console.log(item.name);}
-        });
-    }); 
-}
-getEnterpriseName("Отдел аналитики");
-
-// Пример:
-// getEnterpriseName(4) // Предприятие 1
-// getEnterpriseName("Отдел маркетинга") // Предприятие 2
-
-// 3. Написать функцию, которая будет добавлять предприятие. В качестве аргумента принимает название предприятияfunc    
-const enterprises = [{
-    id: 1,
-    name: "Предприятие 1",
-    departments: [{
-            id: 2,
-            name: "Отдел тестирования",
-            employees_count: 10,
-        },
-        {
-            id: 3,
-            name: "Отдел маркетинга",
-            employees_count: 20,
-        },
-        {
-            id: 4,
-            name: "Администрация",
-            employees_count: 15,
-        },
-    ]
-},
-{
-    id: 5,
-    name: "Предприятие 2",
-    departments: [{
-            id: 6,
-            name: "Отдел разработки",
-            employees_count: 50,
-        },
-        {
-            id: 7,
-            name: "Отдел маркетинга",
-            employees_count: 20,
-        },
-        {
-            id: 8,
-            name: "Отдел охраны труда",
-            employees_count: 5,
-        },
-    ]
-},
-{
-    id: 9,
-    name: "Предприятие 3",
-    departments: [{
-        id: 10,
-        name: "Отдел аналитики",
-        employees_count: 0,
-    }, ]
-}
-];
-
-
 let countDep = 0;
 let counId = 0;
-let newId = enterprises.filter(function(elem){
+let newId = enterprises.filter(function (elem) {
     counId += elem.departments.length;
 });
-let newDepId = enterprises.filter(function(item){
+let newDepId = enterprises.filter(function (item) {
     countDep = enterprises.length;
 });
-let count = countDep + counId + 1; 
+let count = countDep + counId + 1;
 
-function addEnterprise (name){
-    let newEnter = {
+function addDepartment(argument, name) {
+    let newDep = {
         id: count,
         name,
-        departments: []  
+        employees_count: Math.floor(Math.random() * 100) + 1
     };
-    enterprises.push(newEnter);
-    console.log(enterprises);
-} addEnterprise('Hello');
+    enterprises.find(function (element) {
+        if (element.id == argument) {
+            element.departments.push(newDep);
+            
+        }console.log(element);
+    });
+}
+addDepartment(9, "Название нового отдела");
 
-
-// Пример:
-// addEnterprise("Название нового предприятия")
-
-// 4. Написать функцию, которая будет добавлять отдел в предприятие. В качестве аргумента принимает id предприятия, 
-//в которое будет добавлен отдел и название отдела.
 
 // Пример:
 // addDepartment(1, "Название нового отдела")
