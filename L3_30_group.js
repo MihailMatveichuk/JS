@@ -86,7 +86,7 @@ const users = [{
 ];
 
 function findUser() {
-    let findedUsers = users.filter(function (e) {
+    let findedUsers = users.filter(function(e) {
         return e.registrationDate === '09.10.2021' || e.registrationDate === '10.10.2021';
     });
     console.log(findedUsers);
@@ -478,56 +478,56 @@ unic(arr);
 // Предприятие 3 (нет сотрудников)
 // - Отдел аналитики (нет сотрудников)
 
-// const enterprises = [{
-//         id: 1,
-//         name: "Предприятие 1",
-//         departments: [{
-//                 id: 2,
-//                 name: "Отдел тестирования",
-//                 employees_count: 10,
-//             },
-//             {
-//                 id: 3,
-//                 name: "Отдел маркетинга",
-//                 employees_count: 20,
-//             },
-//             {
-//                 id: 4,
-//                 name: "Администрация",
-//                 employees_count: 15,
-//             },
-//         ]
-//     },
-//     {
-//         id: 5,
-//         name: "Предприятие 2",
-//         departments: [{
-//                 id: 6,
-//                 name: "Отдел разработки",
-//                 employees_count: 50,
-//             },
-//             {
-//                 id: 7,
-//                 name: "Отдел маркетинга",
-//                 employees_count: 20,
-//             },
-//             {
-//                 id: 8,
-//                 name: "Отдел охраны труда",
-//                 employees_count: 5,
-//             },
-//         ]
-//     },
-//     {
-//         id: 9,
-//         name: "Предприятие 3",
-//         departments: [{
-//             id: 10,
-//             name: "Отдел аналитики",
-//             employees_count: 0,
-//         }, ]
-//     }
-// ];
+const enterprises = [{
+        id: 1,
+        name: "Предприятие 1",
+        departments: [{
+                id: 2,
+                name: "Отдел тестирования",
+                employees_count: 10,
+            },
+            {
+                id: 3,
+                name: "Отдел маркетинга",
+                employees_count: 20,
+            },
+            {
+                id: 4,
+                name: "Администрация",
+                employees_count: 15,
+            },
+        ]
+    },
+    {
+        id: 5,
+        name: "Предприятие 2",
+        departments: [{
+                id: 6,
+                name: "Отдел разработки",
+                employees_count: 50,
+            },
+            {
+                id: 7,
+                name: "Отдел маркетинга",
+                employees_count: 20,
+            },
+            {
+                id: 8,
+                name: "Отдел охраны труда",
+                employees_count: 5,
+            },
+        ]
+    },
+    {
+        id: 9,
+        name: "Предприятие 3",
+        departments: [{
+            id: 10,
+            name: "Отдел аналитики",
+            employees_count: 0,
+        }, ]
+    }
+];
 
 // let count = 0;
 // enterprises.forEach(function(arr, name) {
@@ -562,56 +562,56 @@ unic(arr);
 // getEnterpriseName("Отдел маркетинга") // Предприятие 2
 
 // 3. Написать функцию, которая будет добавлять предприятие. В качестве аргумента принимает название предприятияfunc    
-// const enterprises = [{
-//     id: 1,
-//     name: "Предприятие 1",
-//     departments: [{
-//             id: 2,
-//             name: "Отдел тестирования",
-//             employees_count: 10,
-//         },
-//         {
-//             id: 3,
-//             name: "Отдел маркетинга",
-//             employees_count: 20,
-//         },
-//         {
-//             id: 4,
-//             name: "Администрация",
-//             employees_count: 15,
-//         },
-//     ]
-// },
-// {
-//     id: 5,
-//     name: "Предприятие 2",
-//     departments: [{
-//             id: 6,
-//             name: "Отдел разработки",
-//             employees_count: 50,
-//         },
-//         {
-//             id: 7,
-//             name: "Отдел маркетинга",
-//             employees_count: 20,
-//         },
-//         {
-//             id: 8,
-//             name: "Отдел охраны труда",
-//             employees_count: 5,
-//         },
-//     ]
-// },
-// {
-//     id: 9,
-//     name: "Предприятие 3",
-//     departments: [{
-//         id: 10,
-//         name: "Отдел аналитики",
-//         employees_count: 0,
-//     }, ]
-// }
-// ];
+const enterprises = [{
+        id: 1,
+        name: "Предприятие 1",
+        departments: [{
+                id: 2,
+                name: "Отдел тестирования",
+                employees_count: 10,
+            },
+            {
+                id: 3,
+                name: "Отдел маркетинга",
+                employees_count: 20,
+            },
+            {
+                id: 4,
+                name: "Администрация",
+                employees_count: 15,
+            },
+        ]
+    },
+    {
+        id: 5,
+        name: "Предприятие 2",
+        departments: [{
+                id: 6,
+                name: "Отдел разработки",
+                employees_count: 50,
+            },
+            {
+                id: 7,
+                name: "Отдел маркетинга",
+                employees_count: 20,
+            },
+            {
+                id: 8,
+                name: "Отдел охраны труда",
+                employees_count: 5,
+            },
+        ]
+    },
+    {
+        id: 9,
+        name: "Предприятие 3",
+        departments: [{
+            id: 10,
+            name: "Отдел аналитики",
+            employees_count: 0,
+        }, ]
+    }
+];
 
 
 // let countDep = 0;
@@ -690,42 +690,167 @@ const enterprises = [{
         }, ]
     }
 ];
-let countDep = 0;
-let counId = 0;
-let newId = enterprises.filter(function (elem) {
-    counId += elem.departments.length;
-});
-let newDepId = enterprises.filter(function (item) {
-    countDep = enterprises.length;
-});
-let count = countDep + counId + 1;
+// let countDep = 0;
+// let counId = 0;
+// let newId = enterprises.filter(function (elem) {
+//     counId += elem.departments.length;
+// });
+// let newDepId = enterprises.filter(function (item) {
+//     countDep = enterprises.length;
+// });
+// let count = countDep + counId + 1;
 
-function addDepartment(argument, name) {
-    let newDep = {
-        id: count,
-        name,
-        employees_count: Math.floor(Math.random() * 100) + 1
-    };
-    enterprises.find(function (element) {
-        if (element.id == argument) {
-            element.departments.push(newDep);
-            
-        }console.log(element);
-    });
-}
-addDepartment(9, "Название нового отдела");
+// function addDepartment(argument, name) {
+//     let newDep = {
+//         id: count,
+//         name,
+//         employees_count: Math.floor(Math.random() * 100) + 1
+//     };
+//     enterprises.find(function (element) {
+//         if (element.id == argument) {
+//             element.departments.push(newDep);
+
+//         }console.log(element);
+//     });
+// }
+// addDepartment(9, "Название нового отдела");
 
 
 // Пример:
 // addDepartment(1, "Название нового отдела")
 
 // 5. Написать функцию для редактирования названия предприятия. Принимает в качестве аргумента id предприятия и новое имя предприятия.
+const enterprises = [{
+        id: 1,
+        name: "Предприятие 1",
+        departments: [{
+                id: 2,
+                name: "Отдел тестирования",
+                employees_count: 10,
+            },
+            {
+                id: 3,
+                name: "Отдел маркетинга",
+                employees_count: 20,
+            },
+            {
+                id: 4,
+                name: "Администрация",
+                employees_count: 15,
+            },
+        ]
+    },
+    {
+        id: 5,
+        name: "Предприятие 2",
+        departments: [{
+                id: 6,
+                name: "Отдел разработки",
+                employees_count: 50,
+            },
+            {
+                id: 7,
+                name: "Отдел маркетинга",
+                employees_count: 20,
+            },
+            {
+                id: 8,
+                name: "Отдел охраны труда",
+                employees_count: 5,
+            },
+        ]
+    },
+    {
+        id: 9,
+        name: "Предприятие 3",
+        departments: [{
+            id: 10,
+            name: "Отдел аналитики",
+            employees_count: 0,
+        }, ]
+    }
+];
+
+// function editEnterprise(argument, name) {
+
+//     enterprises.find(function(element) {
+//         if (element.id == argument) {
+//             element.name = name;
+//         }
+//         console.log(element);
+//     });
+// }
+// editEnterprise(1, "Новое название предприятия");
+
 
 // Пример:
 // editEnterprise(1, "Новое название предприятия")
 
 
 // 6. Написать функцию для редактирования названия отдела. Принимает в качестве аргумента id отдела и новое имя отдела.
+const enterprises = [{
+        id: 1,
+        name: "Предприятие 1",
+        departments: [{
+                id: 2,
+                name: "Отдел тестирования",
+                employees_count: 10,
+            },
+            {
+                id: 3,
+                name: "Отдел маркетинга",
+                employees_count: 20,
+            },
+            {
+                id: 4,
+                name: "Администрация",
+                employees_count: 15,
+            },
+        ]
+    },
+    {
+        id: 5,
+        name: "Предприятие 2",
+        departments: [{
+                id: 6,
+                name: "Отдел разработки",
+                employees_count: 50,
+            },
+            {
+                id: 7,
+                name: "Отдел маркетинга",
+                employees_count: 20,
+            },
+            {
+                id: 8,
+                name: "Отдел охраны труда",
+                employees_count: 5,
+            },
+        ]
+    },
+    {
+        id: 9,
+        name: "Предприятие 3",
+        departments: [{
+            id: 10,
+            name: "Отдел аналитики",
+            employees_count: 0,
+        }, ]
+    }
+];
+
+function editDepartment(argument, name) {
+    enterprises.forEach(function(element) {
+        element.departments.find(item => {
+            if (item.id == argument) {
+                item.name = name;
+            }
+        });
+        console.log(element);
+    });
+}
+editDepartment(10, "Новое название отдела");
+
 
 // Пример:
 // editDepartment(7, "Новое название отдела")
@@ -733,13 +858,83 @@ addDepartment(9, "Название нового отдела");
 
 // 7. Написать функцию для удаления предприятия. В качестве аргумента принимает id предприятия.
 
+const enterprises = [{
+        id: 1,
+        name: "Предприятие 1",
+        departments: [{
+                id: 2,
+                name: "Отдел тестирования",
+                employees_count: 10,
+            },
+            {
+                id: 3,
+                name: "Отдел маркетинга",
+                employees_count: 20,
+            },
+            {
+                id: 4,
+                name: "Администрация",
+                employees_count: 15,
+            },
+        ]
+    },
+    {
+        id: 5,
+        name: "Предприятие 2",
+        departments: [{
+                id: 6,
+                name: "Отдел разработки",
+                employees_count: 50,
+            },
+            {
+                id: 7,
+                name: "Отдел маркетинга",
+                employees_count: 20,
+            },
+            {
+                id: 8,
+                name: "Отдел охраны труда",
+                employees_count: 5,
+            },
+        ]
+    },
+    {
+        id: 9,
+        name: "Предприятие 3",
+        departments: [{
+            id: 10,
+            name: "Отдел аналитики",
+            employees_count: 0,
+        }, ]
+    }
+];
+
+// function deleteEnterprise(argument) {
+//     let newEnterprises = enterprises.filter(item => item.id !== argument);
+//     console.log(newEnterprises);
+// }
+// deleteEnterprise(8);
+
 // Пример:
 // deleteEnterprise(1)
 
 
 // 8. Написать функцию для удаления отдела. В качестве аргумента принимает id отдела. Удалить отдел можно только, 
 //если в нем нет сотрудников.
-
+function deleteDepartment(argument) {
+    enterprises.filter(element => element.departments.find(function(item) {
+        if (item.id == argument) {
+            if (item.employees_count == 0) {
+                let newDepartsment = element.departments.filter(point => point.id !== argument);
+                return newDepartsment;
+            } else {
+                console.log("What will employees do?");
+            }
+        }
+        console.log(element.departments);
+    }));
+}
+deleteDepartment(7);
 // Пример:
 // deleteDepartment(3)
 
